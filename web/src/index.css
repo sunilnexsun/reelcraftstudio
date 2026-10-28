@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+
+/* ── Brand design tokens ─────────────────────────────────────────────── */
+@theme {
+  --color-ink: #0a0a0a;          /* primary black */
+  --color-charcoal: #1f1f1f;     /* dark charcoal */
+  --color-charcoal-2: #2a2a2a;
+  --color-brand: #ff1744;        /* primary accent red/pink */
+  --color-brand-deep: #b8002d;   /* deep red */
+  --color-paper: #ffffff;
+  --color-mist: #f4f4f4;         /* light grey */
+  --color-muted: #a3a3a3;        /* body text on dark */
+  --color-slate: #525252;        /* body text on light */
+
+  --font-display: 'Montserrat', 'Poppins', system-ui, sans-serif;
+  --font-sans: 'Inter', 'Poppins', system-ui, sans-serif;
+
+  --radius-card: 14px;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px -12px rgb(0 0 0 / 0.18);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 84px; /* keeps section headings clear of the sticky header */
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+  body {
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  ::selection {
+    background: var(--color-brand);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 4vw, 32px);
+  }
+  .section-y {
+    padding-block: clamp(64px, 9vw, 112px);
+  }
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-brand);
+  }
+  .heading-xl {
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.98;
+    letter-spacing: -0.01em;
+    font-size: clamp(2.4rem, 6.2vw, 4.6rem);
+  }
+  .heading-lg {
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.02;
+    letter-spacing: -0.005em;
+    font-size: clamp(1.9rem, 4.2vw, 3rem);
+  }
+  .bg-brand-gradient {
+    background-image: linear-gradient(135deg, #ff1744 0%, #b8002d 100%);
+  }
+  /* Fine film-grain texture used on dark placeholder visuals */
+  .grain {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+}

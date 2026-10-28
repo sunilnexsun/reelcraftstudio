@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reel Craft Studio | Video Production &amp; Creative Content</title>
+    <meta
+      name="description"
+      content="Reel Craft Studio creates engaging promotional videos, Instagram reels, product videos, and visual content for brands and businesses."
+    />
+    <meta name="theme-color" content="#0A0A0A" />
+
+    <!-- Favicons (generated from the official logo) -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon-48.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph / social sharing
+         TODO: replace https://www.example.com with the live domain before launch -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Reel Craft Studio" />
+    <meta property="og:title" content="Reel Craft Studio | Video Production &amp; Creative Content" />
+    <meta
+      property="og:description"
+      content="Promotional videos, Instagram reels, product videos and brand storytelling for businesses."
+    />
+    <meta property="og:url" content="https://www.example.com/" />
+    <meta property="og:image" content="https://www.example.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://www.example.com/" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Shown only if the site can't start, e.g. when this source file is opened directly from a folder.
+         The app removes it as soon as it loads. -->
+    <div id="boot-help" hidden style="font:16px/1.6 system-ui,sans-serif;max-width:560px;margin:15vh auto;padding:0 20px;color:#1f1f1f">
+      <h1 style="font-size:22px;margin:0 0 8px">Reel Craft Studio</h1>
+      <p style="margin:0 0 8px">This is the website's <b>source</b> file, so it can't be opened directly.</p>
+      <p style="margin:0">To view the site on your computer, open <b>dist-local/index.html</b> (run <code>npm run build:local</code> first),
+        or run <code>npm install</code> and then <code>npm run dev</code>.</p>
+    </div>
+    <script>
+      setTimeout(function () {
+        var root = document.getElementById('root')
+        if (root && !root.hasChildNodes()) document.getElementById('boot-help').hidden = false
+      }, 1500)
+    </script>
+    <noscript>Reel Craft Studio — video production, Instagram reels and product videos. Please enable JavaScript to view this site.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
