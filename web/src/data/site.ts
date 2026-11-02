@@ -56,8 +56,8 @@ export const formEndpoint: string =
 
 /** Stats strip — figures confirmed by the studio (Oct 2026). */
 export const stats = [
-  { value: '15+', label: 'Projects Completed', icon: 'clapperboard' },
-  { value: '15+', label: 'Happy Clients', icon: 'users' },
+  { value: '50+', label: 'Projects Completed', icon: 'clapperboard' },
+  { value: '65+', label: 'Happy Clients', icon: 'users' },
   { value: '2+', label: 'Years Experience', icon: 'star' },
   { value: '100%', label: 'Creative Focus', icon: 'zap' },
 ] as const
