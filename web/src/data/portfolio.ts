@@ -43,6 +43,11 @@ export interface Project {
   isSample: boolean
 }
 
+
+
+
+
+
 export type PlaceholderTone = 'ember' | 'crimson' | 'amber' | 'rose' | 'steel' | 'violet'
 
 // Relative to the site root, so they work wherever the site is hosted.
